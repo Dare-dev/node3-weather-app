@@ -8,7 +8,7 @@ weatherform.addEventListener("submit", e => {
   const location = search.value;
   msgOne.textContent = "Loading...";
   msgTwo.textContent = "";
-  fetch(`http://localhost:3000/weather/?address=${location}`).then(response => {
+  fetch(`/weather/?address=${location}`).then(response => {
     response.json().then(data => {
       if (data.error) {
         msgOne.textContent = "Invalid Search Term";
